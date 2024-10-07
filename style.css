@@ -7,8 +7,22 @@
 }
 
 .calc {
-  display: flex;
   width: 35%;
   height: 500px;
   border: 1px solid black;
+  display: flex;
+
+  justify-content: center;
+}
+
+#input-no {
+  width: 200px;
+  height: 30px;
+  background-color: aqua;
+  border: 2px solid blue;
+  margin: 20px;
+}
+
+.result {
+  margin: 20px;
 }
