@@ -1,0 +1,14 @@
+.body-content {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc {
+  display: flex;
+  width: 35%;
+  height: 500px;
+  border: 1px solid black;
+}
