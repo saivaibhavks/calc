@@ -1,7 +1,5 @@
 const content = document.querySelector(".content");
 
-console.log("content", content);
-
 const addStyleToDiv = (text, color) => {
   const temp = document.createElement("div");
   temp.style.width = "80px";
@@ -22,22 +20,37 @@ const addStyleToDiv = (text, color) => {
 };
 
 const div11 = addStyleToDiv("7");
+div11.setAttribute("id", "seven");
 const div12 = addStyleToDiv("8");
+div12.setAttribute("id", "eight");
 const div13 = addStyleToDiv("9");
+div13.setAttribute("id", "nine");
 const div14 = addStyleToDiv("/", "#DCDCDC");
+div14.setAttribute("id", "divide");
 const div21 = addStyleToDiv("4");
+div21.setAttribute("id", "four");
 const div22 = addStyleToDiv("5");
+div22.setAttribute("id", "five");
 const div23 = addStyleToDiv("6");
+div23.setAttribute("id", "six");
 const div24 = addStyleToDiv("x", "#DCDCDC");
+div24.setAttribute("id", "multiply");
 const div31 = addStyleToDiv("1");
+div31.setAttribute("id", "one");
 const div32 = addStyleToDiv("2");
+div32.setAttribute("id", "two");
 const div33 = addStyleToDiv("3");
+div33.setAttribute("id", "three");
 const div34 = addStyleToDiv("+", "#DCDCDC");
+div34.setAttribute("id", "add");
 const div41 = addStyleToDiv("0");
+div41.setAttribute("id", "zero");
 const div42 = addStyleToDiv("C", "#DCDCDC");
+div42.setAttribute("id", "clear");
 const div43 = addStyleToDiv("-", "#DCDCDC");
+div43.setAttribute("id", "minus");
 const div44 = addStyleToDiv("=", "#DCDCDC");
-div44.setAttribute("id", "resultBtn");
+div44.setAttribute("id", "equal");
 
 const input = document.createElement("input");
 input.setAttribute("id", "calc-input");
@@ -51,8 +64,6 @@ input.style.marginLeft = "100px";
 input.style.width = "200px";
 input.style.height = "30px";
 input.style.border = "2px solid";
-
-console.log("input", input);
 
 const firstDiv = document.createElement("div");
 firstDiv.style.display = "flex";
@@ -98,10 +109,71 @@ finalDiv.appendChild(fourthDiv);
 
 content.appendChild(finalDiv);
 
-const finalBtn = document.querySelector("#resultBtn");
-const calcInput = document.querySelector("#calc-input");
+const zero = document.querySelector("#zero");
+const one = document.querySelector("#one");
+const two = document.querySelector("#two");
+const three = document.querySelector("#three");
+const four = document.querySelector("#four");
+const five = document.querySelector("#five");
+const six = document.querySelector("#six");
+const seven = document.querySelector("#seven");
+const eight = document.querySelector("#eight");
+const nine = document.querySelector("#nine");
 
-finalBtn.addEventListener("click", (e) => {
-  console.log("aaa", calcInput);
-  const value = console.log("event", e);
+const add = document.querySelector("#add");
+const minus = document.querySelector("#minus");
+const multiply = document.querySelector("#multiply");
+const divide = document.querySelector("#divide");
+const finalBtn = document.querySelector("#equal");
+const calcInput = document.querySelector("#calc-input");
+const clear = document.querySelector("#clear");
+
+zero.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(zero.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+one.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(one.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+two.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(two.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+three.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(three.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+four.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(four.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+five.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(five.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+six.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(six.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+seven.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(seven.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+eight.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(eight.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+nine.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat(nine.innerHTML);
+  calcInput.setAttribute("value", newVal);
 });
