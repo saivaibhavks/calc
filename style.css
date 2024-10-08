@@ -6,15 +6,6 @@
   align-items: center;
 }
 
-.calc {
-  width: 35%;
-  height: 500px;
-  border: 1px solid black;
-  display: flex;
-
-  justify-content: center;
-}
-
 #input-no {
   width: 200px;
   height: 30px;
