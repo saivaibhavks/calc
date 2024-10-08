@@ -33,6 +33,17 @@ const div41 = addStyleToDiv("0");
 const div42 = addStyleToDiv("C", "#DCDCDC");
 const div43 = addStyleToDiv("=", "#DCDCDC");
 
+const input = document.createElement("input");
+input.setAttribute("id", "calc-input");
+input.setAttribute("placeholder", "Enter a number");
+input.setAttribute("maxlength", "2");
+input.style.display = "flex";
+input.style.margin = "50px";
+input.style.width = "200px";
+input.style.height = "30px";
+
+console.log("input", input);
+
 const firstDiv = document.createElement("div");
 firstDiv.style.display = "flex";
 firstDiv.style.gap = "15px";
@@ -65,6 +76,7 @@ fourthDiv.appendChild(div42);
 fourthDiv.appendChild(div43);
 
 const finalDiv = document.createElement("div");
+finalDiv.appendChild(input);
 finalDiv.appendChild(firstDiv);
 finalDiv.appendChild(secondDiv);
 finalDiv.appendChild(thirdDiv);
