@@ -55,7 +55,7 @@ div44.setAttribute("id", "equal");
 const input = document.createElement("input");
 input.setAttribute("id", "calc-input");
 input.setAttribute("placeholder", "Enter a number");
-input.setAttribute("type", "number");
+input.setAttribute("type", "text");
 input.setAttribute("maxlength", "2");
 input.setAttribute("value", "");
 input.style.display = "flex";
@@ -64,6 +64,7 @@ input.style.marginLeft = "100px";
 input.style.width = "200px";
 input.style.height = "30px";
 input.style.border = "2px solid";
+input.style.fontSize = "20px";
 
 const firstDiv = document.createElement("div");
 firstDiv.style.display = "flex";
@@ -175,5 +176,29 @@ eight.addEventListener("click", (e) => {
 
 nine.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(nine.innerHTML);
+  calcInput.setAttribute("value", newVal);
+});
+
+clear.addEventListener("click", (e) => {
+  calcInput.setAttribute("value", "");
+});
+
+add.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat("+");
+  calcInput.setAttribute("value", newVal);
+});
+
+minus.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat("-");
+  calcInput.setAttribute("value", newVal);
+});
+
+divide.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat("/");
+  calcInput.setAttribute("value", newVal);
+});
+
+multiply.addEventListener("click", (e) => {
+  const newVal = calcInput.value.toString().concat("x");
   calcInput.setAttribute("value", newVal);
 });
