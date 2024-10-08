@@ -1,5 +1,5 @@
 .body-content {
-  background-color: aqua;
+  background-color: rgb(184, 184, 184);
   display: flex;
   justify-content: center;
   flex-direction: column;
