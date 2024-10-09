@@ -125,7 +125,7 @@ const add = document.querySelector("#add");
 const minus = document.querySelector("#minus");
 const multiply = document.querySelector("#multiply");
 const divide = document.querySelector("#divide");
-const finalBtn = document.querySelector("#equal");
+const equal = document.querySelector("#equal");
 const calcInput = document.querySelector("#calc-input");
 const clear = document.querySelector("#clear");
 
@@ -201,4 +201,28 @@ divide.addEventListener("click", (e) => {
 multiply.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat("x");
   calcInput.setAttribute("value", newVal);
+});
+
+equal.addEventListener("click", (e) => {
+  const inputVal = calcInput.value;
+  let result;
+
+  if (inputVal.includes("+")) {
+    let newStr = inputVal.split("+");
+    result = parseInt(newStr[0]) + parseInt(newStr[1]);
+    console.log("res is", result);
+  } else if (inputVal.includes("-")) {
+    let newStr = inputVal.split("-");
+    result = parseInt(newStr[0]) - parseInt(newStr[1]);
+    console.log("res is", result);
+  } else if (inputVal.includes("x")) {
+    let newStr = inputVal.split("x");
+    result = parseInt(newStr[0]) * parseInt(newStr[1]);
+    console.log("res is", result);
+  } else {
+    let newStr = inputVal.split("/");
+    result = parseInt(newStr[0]) / parseInt(newStr[1]);
+    console.log("res is", result);
+  }
+  calcInput.setAttribute("value", result.toString());
 });
