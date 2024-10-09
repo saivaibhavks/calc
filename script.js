@@ -129,58 +129,72 @@ const equal = document.querySelector("#equal");
 const calcInput = document.querySelector("#calc-input");
 const clear = document.querySelector("#clear");
 
+let elements = [one, two, three, four, five, six, seven, eight, nine];
+
 zero.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(zero.innerHTML);
+  zero.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 one.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(one.innerHTML);
+  one.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 two.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(two.innerHTML);
+  two.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 three.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(three.innerHTML);
+  three.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 four.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(four.innerHTML);
+  four.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 five.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(five.innerHTML);
+  five.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 six.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(six.innerHTML);
+  six.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 seven.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(seven.innerHTML);
+
+  seven.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 eight.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(eight.innerHTML);
+  eight.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 nine.addEventListener("click", (e) => {
   const newVal = calcInput.value.toString().concat(nine.innerHTML);
+  nine.style.backgroundColor = "#FAEBD7";
   calcInput.setAttribute("value", newVal);
 });
 
 clear.addEventListener("click", (e) => {
   calcInput.setAttribute("value", "");
+  elements.map((item) => (item.style.backgroundColor = "#FFF0F5"));
 });
 
 add.addEventListener("click", (e) => {
@@ -219,10 +233,13 @@ equal.addEventListener("click", (e) => {
     let newStr = inputVal.split("x");
     result = parseInt(newStr[0]) * parseInt(newStr[1]);
     console.log("res is", result);
-  } else {
+  } else if (inputVal.includes("/")) {
     let newStr = inputVal.split("/");
     result = parseInt(newStr[0]) / parseInt(newStr[1]);
     console.log("res is", result);
+  } else {
+    result = calcInput.value.toString();
   }
+  elements.map((item) => (item.style.backgroundColor = "#FFF0F5"));
   calcInput.setAttribute("value", result.toString());
 });
