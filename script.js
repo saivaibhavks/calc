@@ -4,7 +4,7 @@ const addStyleToDiv = (text, color) => {
   const temp = document.createElement("div");
   temp.style.width = "80px";
   temp.style.height = "60px";
-  temp.style.border = "2px solid";
+  temp.style.border = "2px solid #191970";
   temp.style.padding = "5px";
   temp.style.textAlign = "center";
   temp.style.alignContent = "center";
@@ -12,9 +12,10 @@ const addStyleToDiv = (text, color) => {
   temp.style.fontFamily =
     "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
   temp.innerHTML = text;
-  temp.style.backgroundColor = color ? color : "#FFF0F5";
+  temp.style.backgroundColor = color ? color : "#87CEFA";
   temp.style.cursor = "pointer";
   temp.style.fontSize = "50px";
+  temp.style.color = "#191970";
 
   return temp;
 };
@@ -25,7 +26,7 @@ const div12 = addStyleToDiv("8");
 div12.setAttribute("id", "eight");
 const div13 = addStyleToDiv("9");
 div13.setAttribute("id", "nine");
-const div14 = addStyleToDiv("/", "#DCDCDC");
+const div14 = addStyleToDiv("/", "#00BFFF");
 div14.setAttribute("id", "divide");
 const div21 = addStyleToDiv("4");
 div21.setAttribute("id", "four");
@@ -33,7 +34,7 @@ const div22 = addStyleToDiv("5");
 div22.setAttribute("id", "five");
 const div23 = addStyleToDiv("6");
 div23.setAttribute("id", "six");
-const div24 = addStyleToDiv("x", "#DCDCDC");
+const div24 = addStyleToDiv("x", "#00BFFF");
 div24.setAttribute("id", "multiply");
 const div31 = addStyleToDiv("1");
 div31.setAttribute("id", "one");
@@ -41,15 +42,15 @@ const div32 = addStyleToDiv("2");
 div32.setAttribute("id", "two");
 const div33 = addStyleToDiv("3");
 div33.setAttribute("id", "three");
-const div34 = addStyleToDiv("+", "#DCDCDC");
+const div34 = addStyleToDiv("+", "#00BFFF");
 div34.setAttribute("id", "add");
 const div41 = addStyleToDiv("0");
 div41.setAttribute("id", "zero");
-const div42 = addStyleToDiv("C", "#DCDCDC");
+const div42 = addStyleToDiv("C", "#00BFFF");
 div42.setAttribute("id", "clear");
-const div43 = addStyleToDiv("-", "#DCDCDC");
+const div43 = addStyleToDiv("-", "#00BFFF");
 div43.setAttribute("id", "minus");
-const div44 = addStyleToDiv("=", "#DCDCDC");
+const div44 = addStyleToDiv("=", "#00BFFF");
 div44.setAttribute("id", "equal");
 
 const input = document.createElement("input");
@@ -59,10 +60,10 @@ input.setAttribute("type", "text");
 input.setAttribute("maxlength", "2");
 input.setAttribute("value", "");
 input.style.display = "flex";
-input.style.margin = "50px";
-input.style.marginLeft = "100px";
-input.style.width = "200px";
-input.style.height = "30px";
+input.style.marginBottom = "20px";
+input.style.width = "400px";
+
+input.style.height = "50px";
 input.style.border = "2px solid";
 input.style.fontSize = "20px";
 
